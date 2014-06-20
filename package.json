@@ -1,0 +1,27 @@
+{
+  "name": "package.json",
+  "version": "0.0.0",
+  "description": "Grid system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kern-me/grid.git"
+  },
+  "author": "Nico Killips",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kern-me/grid/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-install-dependencies": "~0.2.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-imagemin": "~0.7.1",
+    "grunt-contrib-less": "~0.11.2",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-concat": "~0.4.0"
+  }
+}
