@@ -5,10 +5,10 @@
     <meta name="description" content="" />
 
     <meta name="keywords" content="<?=$keywords?>" />
-    <meta name="author" content="Vodori Inc." />
+    <meta name="author" content="Grid" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!--[if lt IE 9]>
     <script src="/js/vendor/html5shiv.js"></script>
@@ -23,14 +23,160 @@
     <link href='http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
 
     <!-- JS -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>if (!window.jQuery) { document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>'); }</script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <!--<script>if (!window.jQuery) { document.write('<script src="/js/vendor/jquery-1.11.0.min.js"><\/script>'); }</script>-->
 
-    <script src="/js/build/main-prod.min.js"></script>
+    <!--<script src="/js/build/main-prod.min.js"></script>-->
     <!-- <script src="/js/build/main-dev.js"></script> -->
 
 </head>
 <body>
+<div class="wrap cf">
+    <nav class="nav--primary left">
+        <div class="logo"></div>
+        <ul class="list--vertical">
+            <li class=""></li>
+        </ul>
+    </nav>
+    <div class="content left">
+        <h2>Base Grid</h2>
+        <div class="row">
+            <div class="col-1 first">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1">Col 1</div>
+            <div class="col-1 last">Col 1</div>
+        </div>
+        <div class="row">
+            <div class="col-2 first">Col 2</div>
+            <div class="col-2">Col 2</div>
+            <div class="col-2">Col 2</div>
+            <div class="col-2">Col 2</div>
+            <div class="col-2">Col 2</div>
+            <div class="col-2 last">Col 2</div>
+        </div>
+        <div class="row">
+            <div class="col-3 first">Col 3</div>
+            <div class="col-3">Col 3</div>
+            <div class="col-3">Col 3</div>
+            <div class="col-3 last">Col 3</div>
+        </div>
+        <div class="row">
+            <div class="col-4 first">Col 4</div>
+            <div class="col-4">Col 4</div>
+            <div class="col-4 last">Col 4</div>
+        </div>
+        <div class="row">
+            <div class="col-5 first">Col 5</div>
+            <div class="col-5">Col 5</div>
+            <div class="col-2 last">Col 2</div>
+        </div>
+        <div class="row">
+            <div class="col-6 first">Col 6</div>
+            <div class="col-6 last">Col 6</div>
+        </div>
+        <div class="row">
+            <div class="col-7 first">Col 7</div>
+            <div class="col-5">Col 5</div>
+        </div>
+        <div class="row">
+            <div class="col-8 first">Col 8</div>
+            <div class="col-4">Col 4</div>
+        </div>
+        <div class="row">
+            <div class="col-9 first">Col 9</div>
+            <div class="col-3">Col 3</div>
+        </div>
+        <div class="row">
+            <div class="col-10 first">Col 10</div>
+            <div class="col-2 last">Col 2</div>
+        </div>
+        <div class="row">
+            <div class="col-11 first">Col 11</div>
+            <div class="col-1 last">Col 1</div>
+        </div>
+        <div class="row">
+            <div class="col-12">Col 12</div>
+        </div>
+        <h2>Offsets</h2>
+        <div class="row">
+            <div class="col-11 offset-1 last">Offset 1</div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-2 last">Offset 2</div>
+        </div>
+        <div class="row">
+            <div class="col-9 offset-3 last">Offset 3</div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-4 last">Offset 4</div>
+        </div>
+        <div class="row">
+            <div class="col-7 offset-5 last">Offset 5</div>
+        </div>
+        <div class="row">
+            <div class="col-6 offset-6 last">Offset 6</div>
+        </div>
+        <div class="row">
+            <div class="col-5 offset-7 last">Offset 7</div>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-8 last">Offset 8</div>
+        </div>
+        <div class="row">
+            <div class="col-3 offset-9 last">Offset 9</div>
+        </div>
+        <div class="row">
+            <div class="col-2 offset-10 last">Offset 10</div>
+        </div>
+        <div class="row">
+            <div class="col-1 offset-11 last">Offset 11</div>
+        </div>
+        <h2>Onsets</h2>
+        <div class="row">
+            <div class="col-11 onset-1 last">Offset 1</div>
+        </div>
+        <div class="row">
+            <div class="col-10 onset-2 last">Offset 2</div>
+        </div>
+        <div class="row">
+            <div class="col-9 onset-3 last">Offset 3</div>
+        </div>
+        <div class="row">
+            <div class="col-8 onset-4 last">Offset 4</div>
+        </div>
+        <div class="row">
+            <div class="col-7 onset-5 last">Offset 5</div>
+        </div>
+        <div class="row">
+            <div class="col-6 onset-6 last">Offset 6</div>
+        </div>
+        <div class="row">
+            <div class="col-5 onset-7 last">Offset 7</div>
+        </div>
+        <div class="row">
+            <div class="col-4 onset-8 last">Offset 8</div>
+        </div>
+        <div class="row">
+            <div class="col-3 onset-9 last">Offset 9</div>
+        </div>
+        <div class="row">
+            <div class="col-2 onset-10 last">Offset 10</div>
+        </div>
+        <div class="row">
+            <div class="col-1 onset-11 last">Offset 11</div>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
