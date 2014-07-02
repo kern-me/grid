@@ -1,5 +1,22 @@
 /* Grid */
+// -----------------------------
+// BASE VALUES
+// -----------------------------
+@base-width: 100%;
+@number-of-columns: 12;
 
+// We need the 0% in order to compute a baseline unit.
+// Then, we need 100 to compute the correct percentage value, essentially putting the decimal in the right place.
+@col-width: 0% + (100 / @number-of-columns);
+@col-padding: 2%; // The space between columns
+@gutter: 70px;
+
+// Helper Variables
+@one-half: 50%;
+@one-quarter: 25%;
+@one-third: 33.3333333%;
+@two-thirds: 66.666666%;
+@one-sixth: 16.666667%;
 
 // -----------------------------
 // ROWS
@@ -7,7 +24,6 @@
 
 .row {
     *zoom: 1;
-    width: 100%;
     &:before, &:after {
         content: " ";
         display: table;
@@ -21,15 +37,26 @@
 // -----------------------------
 // HELPERS
 // -----------------------------
-
-// Floats
-.left {
-    float: left;
+.remove-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-.right {
-    float: right;
+.remove-left {
+    padding-left: 0 !important;
 }
+
+.remove-right {
+    padding-right: 0 !important;
+}
+
+//.first {
+//    padding-left: 0 !important;
+//}
+//
+//.last {
+//    padding-right: 0 !important;
+//}
 
 // Clearfix
 .cf {
@@ -48,182 +75,105 @@
 // COLUMNS
 // -----------------------------
 
-@col-padding: 18px;
-@col-width: 92px; // The actual width with the padding included
-@gutter: 70px;
-@base-width: 1366px;
-
-.col,
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12
-{
+//@import 'columns';
+.col {
     float: left;
-    padding: 0 @col-padding;
+    padding-left: @col-padding;
     .box-sizing();
-
-    &.first {
-        padding-left: 0;
-    }
-
-    &.last {
-        padding-right: 0;
-    }
 }
 
-.col-1 {
+.one {
     width: @col-width;
+
 }
 
-.col-2 {
+.two {
     width: @col-width * 2;
 }
 
-.col-3 {
+.three {
     width: @col-width * 3;
 }
 
-.col-4 {
+.four {
     width: @col-width * 4;
 }
 
-.col-5 {
+.five {
     width: @col-width * 5;
 }
 
-.col-6 {
+.six {
     width: @col-width * 6;
 }
 
-.col-7 {
+.seven {
     width: @col-width * 7;
 }
 
-.col-8 {
+.eight {
     width: @col-width * 8;
 }
 
-.col-9 {
+.nine {
     width: @col-width * 9;
 }
 
-.col-10 {
+.ten {
     width: @col-width * 10;
 }
 
-.col-11 {
+.eleven {
     width: @col-width * 11;
 }
 
-.col-12 {
-    // Since this is the max number of columns, we set the padding to zero so we don't have to think about adding "first" or "last" to the column markup.
-    padding: 0;
+.twelve {
     width: @col-width * 12;
 }
 
-// -----------------------------
 // OFFSETS
-// -----------------------------
-
-.offset-1 {
+.offset-one {
     margin-left: @col-width;
 }
 
-.offset-2 {
+.offset-two {
     margin-left: @col-width * 2;
 }
 
-.offset-3 {
+.offset-three {
     margin-left: @col-width * 3;
 }
 
-.offset-4 {
+.offset-four {
     margin-left: @col-width * 4;
 }
 
-.offset-5 {
+.offset-five {
     margin-left: @col-width * 5;
 }
 
-.offset-6 {
+.offset-six {
     margin-left: @col-width * 6;
 }
 
-.offset-7 {
+.offset-seven {
     margin-left: @col-width * 7;
 }
 
-.offset-8 {
+.offset-eight {
     margin-left: @col-width * 8;
 }
 
-.offset-9 {
+.offset-nine {
     margin-left: @col-width * 9;
 }
 
-.offset-10 {
+.offset-ten {
     margin-left: @col-width * 10;
 }
 
-.offset-11 {
+.offset-eleven {
     margin-left: @col-width * 11;
-}
-
-// -----------------------------
-// ONSETS
-// -----------------------------
-
-.onset-1 {
-    margin-right: @col-width;
-}
-
-.onset-2 {
-    margin-right: @col-width * 2;
-}
-
-.onset-3 {
-    margin-right: @col-width * 3;
-}
-
-.onset-4 {
-    margin-right: @col-width * 4;
-}
-
-.onset-5 {
-    margin-right: @col-width * 5;
-}
-
-.onset-6 {
-    margin-right: @col-width * 6;
-}
-
-.onset-7 {
-    margin-right: @col-width * 7;
-}
-
-.onset-8 {
-    margin-right: @col-width * 8;
-}
-
-.onset-9 {
-    margin-right: @col-width * 9;
-}
-
-.onset-10 {
-    margin-right: @col-width * 10;
-}
-
-.onset-11 {
-    margin-right: @col-width * 11;
 }
 
 // -----------------------------
@@ -237,27 +187,18 @@
     .box-sizing();
 }
 
-.nav--primary {
-    .box-sizing();
-    background-color: #333;
-    width: 120px;
-
-    .logo {
-        width: 60px;
-        height: 84px;
-    }
-}
-
-
 .content {
-    width: 1246px;
+    position: relative;
     .box-sizing();
-    padding: 0 @gutter;
 }
 
 // -----------------------------
 // PRESENTATIONAL
 // -----------------------------
+
+@brand-color--gray: #ececec;
+@brand-color--white: #ffffff;
+
 h2 {
     font-size: 20px;
     line-height: 20px;
@@ -271,33 +212,24 @@ hr {
 }
 
 .wrap {
-    background-color: orange;
+    background-color: #fff;
 }
 
-.row {
-    background-color: rgb(255, 238, 209);
+.content {
+    padding-top: 2em;
+    background-color: @brand-color--gray;
 }
 
-.col,
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12
-{
-    outline: 1px dotted #ccc;
-    font-size: 1em;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.group {
+    padding: 2em 0;
 }
 
-.col {
-
+.grid {
+    .col {
+        border: 1px dotted #333;
+        font-size: 1em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 60px;
+    }
 }
