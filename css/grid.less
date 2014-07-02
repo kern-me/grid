@@ -1,15 +1,14 @@
-/* Grid */
 // -----------------------------
 // BASE VALUES
 // -----------------------------
-@base-width: 100%;
-@number-of-columns: 12;
+@base-width: 100%;          // We can use relative, or percentage for base-width.
+@number-of-columns: 12;     // Number of grid columms.
+@gutter: 4%;                // Left and Right gutter value of main content container.
+@col-space: 2%;             // Whitespace within columns.
 
-// We need the 0% in order to compute a baseline unit.
-// Then, we need 100 to compute the correct percentage value, essentially putting the decimal in the right place.
-@col-width: 0% + (100 / @number-of-columns);
-@col-padding: 2%; // The space between columns
-@gutter: 70px;
+@col-width: 0% + (100 / @number-of-columns);        // We need the 0% in order to compute a baseline unit.
+                                                    // Then, we need 100 to compute the correct percentage value,
+                                                    // ... essentially putting the decimal in the right place.
 
 // Helper Variables
 @one-half: 50%;
@@ -35,28 +34,28 @@
 }
 
 // -----------------------------
-// HELPERS
+// HTML HELPERS
 // -----------------------------
-.remove-padding {
+.flush {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.remove-left {
-    padding-left: 0 !important;
+.flush-left {
+    margin-left: 0 !important;
 }
 
-.remove-right {
-    padding-right: 0 !important;
+.flush-right {
+    margin-right: 0 !important;
 }
 
-//.first {
-//    padding-left: 0 !important;
-//}
-//
-//.last {
-//    padding-right: 0 !important;
-//}
+.first, .flush-left {
+    margin-left: 0 !important;
+}
+
+.last, .flush-right {
+    margin-right: 0 !important;
+}
 
 // Clearfix
 .cf {
@@ -75,10 +74,9 @@
 // COLUMNS
 // -----------------------------
 
-//@import 'columns';
 .col {
     float: left;
-    padding-left: @col-padding;
+    padding-left: @col-space;
     .box-sizing();
 }
 
@@ -131,7 +129,10 @@
     width: @col-width * 12;
 }
 
+// -----------------------------
 // OFFSETS
+// -----------------------------
+
 .offset-one {
     margin-left: @col-width;
 }
@@ -190,46 +191,4 @@
 .content {
     position: relative;
     .box-sizing();
-}
-
-// -----------------------------
-// PRESENTATIONAL
-// -----------------------------
-
-@brand-color--gray: #ececec;
-@brand-color--white: #ffffff;
-
-h2 {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    margin: 1em 0 1.5em 0;
-}
-
-hr {
-    border: 1px solid #333;
-    outline: none;
-}
-
-.wrap {
-    background-color: #fff;
-}
-
-.content {
-    padding-top: 2em;
-    background-color: @brand-color--gray;
-}
-
-.group {
-    padding: 2em 0;
-}
-
-.grid {
-    .col {
-        border: 1px dotted #333;
-        font-size: 1em;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        min-height: 60px;
-    }
 }
