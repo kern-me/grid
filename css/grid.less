@@ -1,16 +1,17 @@
 // -----------------------------
-// BASE VALUES
+// EDITABLES BASE VALUES
 // -----------------------------
-@base-width: 100%;          // We can use relative, or percentage for base-width.
-@number-of-columns: 12;     // Number of grid columms.
-@gutter: 4%;                // Left and Right gutter value of main content container.
-@col-space: 2%;             // Whitespace within columns.
+@base-width: 100%;                                  // We can use relative, or percentage for base-width.
+@number-of-columns: 12;                             // Number of grid columms.
+@gutter: 4%;                                        // Left and Right gutter value of main content container.
+@col-space: 2%;                                     // Whitespace within columns.
 
-@col-width: 0% + (100 / @number-of-columns);        // We need the 0% in order to compute a baseline unit.
-                                                    // Then, we need 100 to compute the correct percentage value,
-                                                    // ... essentially putting the decimal in the right place.
+// NON-EDITABLE BASE VALUES
 
-// Helper Variables
+// We need the 0% in order to compute a baseline unit.
+// Then, we need 100 to compute the correct percentage value,
+// ... essentially putting the decimal in the right place.
+@col-width: 0% + (100 / @number-of-columns);
 @one-half: 50%;
 @one-quarter: 25%;
 @one-third: 33.3333333%;
