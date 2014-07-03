@@ -21,7 +21,6 @@
 // -----------------------------
 // ROWS
 // -----------------------------
-
 .row {
     *zoom: 1;
     &:before, &:after {
@@ -37,6 +36,18 @@
 // -----------------------------
 // HTML HELPERS
 // -----------------------------
+.one-half {
+    width: @one-half;
+}
+
+.one-quarter {
+    width: @one-quarter;
+}
+
+.one-third {
+    width: @one-third;
+}
+
 .flush {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -56,6 +67,11 @@
 
 .last, .flush-right {
     margin-right: 0 !important;
+}
+
+.img {
+    width: 100%;
+    vertical-align: middle;
 }
 
 // Clearfix
@@ -83,7 +99,6 @@
 
 .one {
     width: @col-width;
-
 }
 
 .two {
