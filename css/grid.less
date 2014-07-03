@@ -1,1 +1,194 @@
-/* Grid */
+// -----------------------------
+// BASE VALUES
+// -----------------------------
+@base-width: 100%;          // We can use relative, or percentage for base-width.
+@number-of-columns: 12;     // Number of grid columms.
+@gutter: 4%;                // Left and Right gutter value of main content container.
+@col-space: 2%;             // Whitespace within columns.
+
+@col-width: 0% + (100 / @number-of-columns);        // We need the 0% in order to compute a baseline unit.
+                                                    // Then, we need 100 to compute the correct percentage value,
+                                                    // ... essentially putting the decimal in the right place.
+
+// Helper Variables
+@one-half: 50%;
+@one-quarter: 25%;
+@one-third: 33.3333333%;
+@two-thirds: 66.666666%;
+@one-sixth: 16.666667%;
+
+// -----------------------------
+// ROWS
+// -----------------------------
+
+.row {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// -----------------------------
+// HTML HELPERS
+// -----------------------------
+.flush {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.flush-left {
+    margin-left: 0 !important;
+}
+
+.flush-right {
+    margin-right: 0 !important;
+}
+
+.first, .flush-left {
+    margin-left: 0 !important;
+}
+
+.last, .flush-right {
+    margin-right: 0 !important;
+}
+
+// Clearfix
+.cf {
+    *zoom: 1;
+    &:before, &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// -----------------------------
+// COLUMNS
+// -----------------------------
+
+.col {
+    float: left;
+    padding-left: @col-space;
+    .box-sizing();
+}
+
+.one {
+    width: @col-width;
+
+}
+
+.two {
+    width: @col-width * 2;
+}
+
+.three {
+    width: @col-width * 3;
+}
+
+.four {
+    width: @col-width * 4;
+}
+
+.five {
+    width: @col-width * 5;
+}
+
+.six {
+    width: @col-width * 6;
+}
+
+.seven {
+    width: @col-width * 7;
+}
+
+.eight {
+    width: @col-width * 8;
+}
+
+.nine {
+    width: @col-width * 9;
+}
+
+.ten {
+    width: @col-width * 10;
+}
+
+.eleven {
+    width: @col-width * 11;
+}
+
+.twelve {
+    width: @col-width * 12;
+}
+
+// -----------------------------
+// OFFSETS
+// -----------------------------
+
+.offset-one {
+    margin-left: @col-width;
+}
+
+.offset-two {
+    margin-left: @col-width * 2;
+}
+
+.offset-three {
+    margin-left: @col-width * 3;
+}
+
+.offset-four {
+    margin-left: @col-width * 4;
+}
+
+.offset-five {
+    margin-left: @col-width * 5;
+}
+
+.offset-six {
+    margin-left: @col-width * 6;
+}
+
+.offset-seven {
+    margin-left: @col-width * 7;
+}
+
+.offset-eight {
+    margin-left: @col-width * 8;
+}
+
+.offset-nine {
+    margin-left: @col-width * 9;
+}
+
+.offset-ten {
+    margin-left: @col-width * 10;
+}
+
+.offset-eleven {
+    margin-left: @col-width * 11;
+}
+
+// -----------------------------
+// STRUCTURE
+// -----------------------------
+
+.wrap {
+    margin: 0 auto;
+    padding: 0;
+    width: @base-width;
+    .box-sizing();
+}
+
+.content {
+    position: relative;
+    .box-sizing();
+}
