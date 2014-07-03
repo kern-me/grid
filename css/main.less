@@ -4,3 +4,12 @@
 @import 'grid';             // Main grid rules
 @import 'style';            // Grid presentation styling rules
 @import 'media-queries';    // Media Queries
+
+@base-font-size: 1.25em;
+@brand-font--serif: 'Libre Baskerville', serif;
+
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing:    @type;
+    box-sizing:         @type;
+}
