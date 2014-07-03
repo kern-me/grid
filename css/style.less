@@ -4,38 +4,46 @@
 
 @brand-color--gray: #ececec;
 @brand-color--white: #ffffff;
-
-h2 {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: bold;
-    margin: 1em 0 1.5em 0;
-}
+@brand-color--blue: #becdd8;
 
 hr {
     border: 1px solid #333;
     outline: none;
-    }
+    margin: @gutter 0;
+}
 
 .wrap {
     background-color: #fff;
 }
 
-.content {
-    padding-top: 2em;
-    background-color: @brand-color--gray;
-}
 
-.group {
+
+.content {
     padding: 2em 0;
+    background-color: @brand-color--gray;
+    margin-left: @gutter;
+    margin-right: @gutter;
 }
 
 .grid {
+    @border: 1px dotted #333;
+
     .col {
-        border: 1px dotted #333;
-        font-size: 1em;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        border: @border;
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        font-size: 1rem;
         min-height: 60px;
+        background-color: @brand-color--blue;
+    }
+
+    .border-top {
+        border-top: @border;
+    }
+
+    @media @mobile, @tablet {
+        .col {
+            border-top: @border;
+        }
     }
 }
